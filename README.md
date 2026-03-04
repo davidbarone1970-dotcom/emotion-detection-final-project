@@ -1,42 +1,38 @@
-# NLP Emotion Detection (IBM / Coursera Final Project)
+# AI Emotion Detection Web Application
 
-This project implements an NLP-based emotion detection system using IBM Watson NLP APIs.
+This project implements an AI-powered emotion detection system using Natural Language Processing (NLP).
 
-## Features
+The application analyzes user input text and predicts emotional states based on probability scores. The system identifies five emotions:
 
-- Detects emotions from text input
-- Returns scores for:
-  - anger
-  - disgust
-  - fear
-  - joy
-  - sadness
-- Identifies the dominant emotion
-- Flask web interface for interaction
+- anger
+- disgust
+- fear
+- joy
+- sadness
 
-## Tech Stack
+The dominant emotion is automatically determined based on the highest probability score.
 
-- Python
-- Flask
-- IBM Watson NLP API
-- HTML / JavaScript
+---
 
-## Example
+# Project Overview
 
-Input:
+This application provides a simple web interface where users can enter text and receive an emotional analysis.
 
-I am extremely happy today
+The backend processes the text and sends it to the IBM Watson NLP Emotion Prediction API. The API returns probability scores for each emotion, which are then displayed in the browser.
 
-Output:
+---
 
-anger: 0.007  
-disgust: 0.001  
-fear: 0.030  
-joy: 0.976  
-sadness: 0.034  
+# Architecture
 
-Dominant emotion: **joy**
+The application consists of three main components.
 
-## Author
+## Backend (Python / Flask)
 
-David Barone
+Handles:
+
+- HTTP requests
+- API communication
+- emotion prediction processing
+- returning the results to the frontend
+
+Main backend file:
