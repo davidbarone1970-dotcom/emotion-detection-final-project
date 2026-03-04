@@ -1,136 +1,84 @@
-# AI Emotion Detection Web Application
+# Final Project: Emotion Detector using Watson NLP
 
-This project implements an AI-powered emotion detection system using Natural Language Processing (NLP).
+This repository contains the **Final Project** for the IBM course  
+**"Developing AI Applications with Python and Flask"**.
 
-The application analyzes user input text and predicts emotional states based on probability scores. The system identifies five emotions:
-
-- anger
-- disgust
-- fear
-- joy
-- sadness
-
-The dominant emotion is automatically determined based on the highest probability score.
+The project implements an AI-powered **Emotion Detection web application** using the Watson NLP library. The application analyzes user-provided text and identifies emotions such as anger, disgust, fear, joy, and sadness. It also determines the dominant emotion in the analyzed text.
 
 ---
 
-# Project Overview
+## Project Overview
 
-This application provides a simple web interface where users can enter text and receive an emotional analysis.
+The application performs the following steps:
 
-The backend processes the text and sends it to the IBM Watson NLP Emotion Prediction API. The API returns probability scores for each emotion, which are then displayed in the browser.
+1. Accepts user input through a web interface.
+2. Sends the text to the Watson NLP Emotion Detection API.
+3. Processes the response returned by the API.
+4. Displays the emotion scores and the dominant emotion.
 
----
-
-# Architecture
-
-The application consists of three main components.
-
-## Backend (Python / Flask)
-
-Handles:
-
-- HTTP requests
-- API communication
-- emotion prediction processing
-- returning the results to the frontend
-
-Main backend file:
-
-
-Emotion detection logic:
+The project demonstrates how AI services can be integrated into a web application using Python and Flask.
 
 ---
 
-## Frontend (HTML / JavaScript)
-
-User interface for entering text and displaying results.
-
----
-
-## Frontend (HTML / JavaScript)
-
-User interface for entering text and displaying results.
-
----
-
-## NLP Emotion API
-
-The application uses the IBM Watson NLP Emotion Prediction model.
-
-The API returns probability scores for:
-
-- anger
-- disgust
-- fear
-- joy
-- sadness
-
----
-
-# Application Flow
-
-1. User enters text in the web interface
-2. JavaScript sends the text to the Flask backend
-3. Flask calls the Watson NLP Emotion Prediction API
-4. API returns emotion probabilities
-5. The system determines the dominant emotion
-6. Results are displayed in the browser
-
----
-
-# Example
-
-Input text
-
-Output
-
-Dominant emotion
-
----
-
-# Technology Stack
+## Technologies Used
 
 - Python
 - Flask
-- IBM Watson NLP API
-- HTML
-- JavaScript
-- REST API integration
+- Watson NLP Emotion Detection API
+- HTML / CSS
+- Unit Testing
+- Static Code Analysis (pylint)
 
 ---
 
-# Installation
-
-Clone the repository:
-
-
-Install dependencies:
-
-Run the application:
-
-Open in your browser:
-
----
-
-# Learning Objective
-
-This project was created as part of the **IBM / Coursera NLP Emotion Detection Final Project**.
-
-The objective was to build a working NLP application that:
-
-- integrates an external AI model
-- processes text data
-- returns structured emotion predictions
-- provides a web-based interface
+## Project Structure
+emotion-detection-final-project/
+│
+├── EmotionDetection/
+│ ├── init.py
+│ └── emotion_detection.py
+│
+├── templates/
+│ └── index.html
+│
+├── static/
+│
+├── server.py
+├── test_emotion_detection.py
+└── README.md
 
 ---
 
-# Author
+## Running the Application
+
+To start the Flask server, run:
+
+Then open the application in your browser.
+
+---
+
+## Example Input
+I love this technology
+
+Example Output:
+For the given statement, the system response is
+'anger': 0.013241, 'disgust': 0.002052, 'fear': 0.009091,
+'joy': 0.969952, 'sadness': 0.054984.
+The dominant emotion is joy.
+
+---
+
+## Features
+
+- Emotion analysis using Watson NLP
+- Flask web interface
+- Error handling for invalid input
+- Unit tests for application validation
+- Static code analysis using pylint
+
+---
+
+## Author
 
 David Barone
 
-Digital Transformation | AI Strategy | Python | NLP
-
-GitHub  
-https://github.com/davidbarone1970-dotcom
